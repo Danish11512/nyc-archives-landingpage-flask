@@ -5,5 +5,5 @@ from landing_page import app
 
 @app.route('/')
 def index():
-    app.logger.warning('sample message')
+    # app.logger.warning('sample message')
     return render_template('index.html')

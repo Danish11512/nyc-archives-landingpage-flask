@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>landing_page</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-  </head>
-  <body>
-    Welcome to landing_page
-  </body>
+</head>
+
+<body>
+    {% block page_content %}
+    <div class="row">
+        {% if active_users %}
+        <a href="{{ url_for('index') }}?active=False">View Inactive Users</a> {% else %}
+        <a href="{{ url_for('index') }}?active=True">View Active Users</a> {% endif %} {%endblock%} Welcome to landing_page
+</body>
+
 </html>
