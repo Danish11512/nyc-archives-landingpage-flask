@@ -5,14 +5,92 @@
     <meta charset="utf-8">
     <title>landing_page</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="http://allfont.net/allfont.css?fonts=franklin-gothic-book" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>{% block page_title %} Landing Page {% endblock %}
+    </title>
 </head>
 
 <body>
-    {% block page_content %}
-    <div class="row">
-        {% if active_users %}
-        <a href="{{ url_for('index') }}?active=False">View Inactive Users</a> {% else %}
-        <a href="{{ url_for('index') }}?active=True">View Active Users</a> {% endif %} {%endblock%} Welcome to landing_page
+    {% block pagecontent %} {% if room == 000 %}
+    <a href="{{ url_for('index') }}?room=000"> 000</a>
+    <div class='container'>
+        <div id='header' class='row'>
+            <div class="w-100 h-100 d-inline-block text-center align-items-center text-autowrap">
+                <div class='bg-secondary w-100 h-100 '></div>
+                <br><br><br><br><br><br>
+                <div class='col-sm-12 col-md-12 col-xs-12 col-lg-12 col-centered text-light'>
+                    <h2>NEW YORK CITY DEPARTMENT OF RECORDS & INFORMATION SERVICES</h2>
+                </div>
+                <br>
+                <div class='text-weight-bold text-light'>
+                    <h3>MUNICIPAL LIBRARY & ARCHIVES</h3>
+                </div>
+                <br><br><br><br><br><br>
+            </div>
+        </div>
+    </div>
+    <div id='section-info' class='container'>
+        <div class="row">
+            <div class='col-lg-4 col-md-12 col-sm-12' style="margin-left: 2%;">
+                <br>
+                <h3 style=" color: #4310a2;">ARCHIVAL COLLECTIONS</h3>
+                <hr>
+                <a href="">
+                    <h3>Finding Aids</h3>
+                </a>
+                <p>The Archives preserves and makes available New York City government’s historical records.</p>
+                <br><br>
+                <a href="">
+                    <h3>Digital Collections</h3>
+                </a>
+                <p>Search digitized manuscripts, images, blueprints, drawings, tax photographs & audio-visual collections.</p>
+                <br>
+                <a href="">
+                    <h3>Buildings & Properties</h3>
+                </a>
+                <p>Search collection inventories for buildings and properties including block and lot records, assessments, and alterations indices.</p>
+            </div>
+            <div class='col-lg-4 col-md-12 col-sm-12' style="margin-right: 2%; margin-left: 2%; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0">
+                <br>
+                <h3 style=" color: #4310a2;">LIBRARY COLLECTIONS</h3>
+                <hr>
+                <a href="">
+                    <h3>Library Catalog</h3>
+                </a>
+                <p>The Municipal Library contains more than 400,000 unique reports, books, periodicals and documents about New York City government.</p>
+                <br>
+                <a href="">
+                    <h3>Digital Publication</h3>
+                </a>
+                <p>The Library also makes available a growing collection of digital agency reports.</p>
+                <p></p>
+                </p>
+            </div>
+            <div class='col' style="margin-right: 2%;">
+                <br>
+                <h3 style=" color: #4310a2;">FAMILY HISTORY</h3>
+                <hr>
+                <a href="">
+                    <h3>Vital Records</h3>
+                </a>
+                <p>The Municipal Archives maintains historical birth, death and marriage records for the five boroughs of New York City.</p><br>
+                <a href="">
+                    <h3>Indexes & Resources</h3>
+                </a>
+                <p>Research civil lists, NYC shuls, Veterans resources and indexes.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    {% else %}
+    <a href="{{ url_for('index') }}?room=001"> 001</a>{% endif %} {%endblock%}
+
 </body>
 
 </html>
