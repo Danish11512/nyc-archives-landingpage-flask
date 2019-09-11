@@ -1,0 +1,2 @@
+recursive-include landing_page/templates *
+recursive-include landing_page/static *
