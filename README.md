@@ -1,6 +1,4 @@
-# landing_page
-
-landing_page description
+# NYC Department of Records web Portal Landing Page
 
 ## Quick Start
 
