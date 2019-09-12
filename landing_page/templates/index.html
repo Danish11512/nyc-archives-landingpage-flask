@@ -54,7 +54,7 @@
         #section-headers {
             margin-top: 2%;
             margin-bottom: 2%;
-            font-family: 'Franklin Gothic Medium', sans-serif
+            font-family: 'Franklin Gothic Medium', sans-serif;
         }
         
         #section-info {
@@ -77,8 +77,7 @@
 </head>
 
 <body>
-    {% block pagecontent %} {% if room == 000 %}
-    <a href="{{ url_for('index') }}?room=000"> 000</a>
+    {% block pagecontent %} {% if room == 'reference' %}
     <div class='container'>
         <div id='header' class='row'>
             <div class="w-100 h-100 d-inline-block text-center align-items-center text-autowrap">
@@ -152,7 +151,63 @@
     </div>
 
     {% else %}
-    <a href="{{ url_for('index') }}?room=001"> 001</a>{% endif %} {%endblock%}
+    <div class='container'>
+        <div id='header' class='row'>
+            <div class="w-100 h-100 d-inline-block text-center align-items-center text-autowrap">
+                <div class='bg-secondary w-100 h-100 '></div>
+                <br><br><br><br><br><br>
+                <div class='col-sm-12 col-md-12 col-xs-12 col-lg-12 col-centered text-light'>
+                    <h2>NEW YORK CITY DEPARTMENT OF RECORDS & INFORMATION SERVICES</h2>
+                </div>
+                <br>
+                <div class='text-weight-bold text-light'>
+                    <h3>MUNICIPAL LIBRARY & ARCHIVES</h3>
+                </div>
+                <br><br><br><br><br><br>
+            </div>
+        </div>
+    </div>
+    <div id='section-info' class='container'>
+        <div class="row" style="">
+            <div class='col-lg-6 col-md-12 col-sm-12'>
+                <br>
+                <h3 style=" color: #4310a2;">ARCHIVAL COLLECTIONS</h3>
+                <hr>
+                <a href="">
+                    <h3>Finding Aids</h3>
+                </a>
+                <p>The Archives preserves and makes available New York City government’s historical records.</p>
+                <br><br>
+                <a href="">
+                    <h3>Digital Collections</h3>
+                </a>
+                <p>Search digitized manuscripts, images, blueprints, drawings, tax photographs & audio-visual collections.</p>
+                <br>
+                <a href="">
+                    <h3>Buildings & Properties</h3>
+                </a>
+                <p>Search collection inventories for buildings and properties including block and lot records, assessments, and alterations indices.</p>
+            </div>
+            <div class='col-lg-6 col-md-12 col-sm-12'>
+                <br>
+                <h3 style=" color: #4310a2;">LIBRARY COLLECTIONS</h3>
+                <hr>
+                <a href="">
+                    <h3>Library Catalog</h3>
+                </a>
+                <p>The Municipal Library contains more than 400,000 unique reports, books, periodicals and documents about New York City government.</p>
+                <br>
+                <a href="">
+                    <h3>Digital Publication</h3>
+                </a>
+                <p>The Library also makes available a growing collection of digital agency reports.</p>
+                <p></p>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    {% endif %} {%endblock%}
 
 </body>
 
