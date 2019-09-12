@@ -12,5 +12,5 @@ from landing_page import app
 
 @app.route('/')
 def index():
-    room = str(request.args.get('room', 'reading'))
+    room = request.args.get('room', 'reading')
     return render_template('index.html', room = room)
