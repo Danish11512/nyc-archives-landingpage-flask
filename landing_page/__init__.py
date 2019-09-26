@@ -2,12 +2,10 @@ import os
 from flask import Flask
 
 app = Flask(__name__)
-
 if os.getenv('LANDING_PAGE_SETTINGS', None):
     app.config.from_envvar('LANDING_PAGE_SETTINGS')
 else:
     app.config.from_object('landing_page.default_settings')
-
 
 if not app.debug:
     import logging
