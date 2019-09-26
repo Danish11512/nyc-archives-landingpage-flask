@@ -1,1 +1,1 @@
-web: gunicorn views:index
+web: gunicorn make:all
