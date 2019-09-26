@@ -1,1 +1,1 @@
-web: gunicorn Makefile:make all
+web: gunicorn Makefile:all
