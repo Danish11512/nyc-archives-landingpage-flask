@@ -1,1 +1,1 @@
-web: gunicorn Makefile:all
+web: gunicorn landing_page:app
