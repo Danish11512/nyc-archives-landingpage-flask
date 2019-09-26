@@ -1,1 +1,1 @@
-web: gunicor views:index
+web: gunicorn views:index
